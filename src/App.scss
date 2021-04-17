@@ -1,0 +1,189 @@
+.App {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+// Home
+.home {
+  display: flex;
+  margin-top: -4.625rem;
+  background-color: rgb(228, 230, 231);
+  background-image: url(/src/blank-profile.png);
+  background-repeat: no-repeat;
+  background-position-x: 36rem;
+  background-position-y: center;
+  background-size: 40rem;
+}
+
+// Loading Screen
+.loadingScreen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4.625rem;
+  p {
+    margin-top: -5rem;
+    font-weight: bold;
+  }
+}
+
+// Loading Detail
+.loadingDetail {
+  width: 65%;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  border: black solid 0.0625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Error Screen
+.errorScreen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4.625rem;
+}
+
+// Navbar
+.navbar {
+  background: rgba(70, 70, 70, 0.822);
+  color: white;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 99;
+}
+
+// Contact List
+.contactList {
+  box-sizing: border-box;
+  width: 35%;
+  height: 100vh;
+  background: rgb(224, 224, 224);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+  .listContainer {
+    background: rgba(255, 255, 255, 0.534);
+    width: 95%;
+    height: 82vh;
+    margin-top: 3.125rem;
+    margin-bottom: 0.625rem;
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding-bottom: 0.7rem;
+    @media only screen and (max-width: 768px) {
+      padding-top: 23.5rem;
+    }
+  }
+  button {
+    width: 95%;
+  }
+}
+
+// Form Add
+.form-container {
+  width: 200%;
+  height: 100vh;
+  background: rgb(224, 224, 224);
+  border: black solid 0.0625rem;
+  .form-content {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    .form-header {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Card
+.card {
+  margin-top: 0.625rem;
+  width: 95%;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem !important;
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+  }
+  img {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    margin-left: 0.625rem;
+    margin-right: 1.25rem;
+  }
+  .btn {
+    width: 10%;
+    height: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+.card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+// Contact's Detail
+.detail-container {
+  width: 65%;
+  height: 100vh;
+  background: rgb(224, 224, 224);
+  border: black solid 0.0625rem;
+  .detail-content {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    .detail-header {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+    .detail-body {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+      }
+      .personal-data {
+        width: 95%;
+        height: 10vh;
+        background: white;
+        border-radius: 0.625rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 0.625rem;
+        padding: 2.25rem;
+      }
+    }
+    .detail-footer {
+      margin-left: 1.1rem;
+    }
+  }
+}

@@ -1,38 +1,285 @@
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: -4.625rem;
+  background-color: #e4e6e7;
+  background-image: url(/src/blank-profile.png);
+  background-repeat: no-repeat;
+  background-position-x: 36rem;
+  background-position-y: center;
+  background-size: 40rem;
+}
+
+.loadingScreen {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -4.625rem;
+}
+
+.loadingScreen p {
+  margin-top: -5rem;
+  font-weight: bold;
+}
+
+.loadingDetail {
+  width: 65%;
+  height: 100vh;
+  background: white;
+  border: black solid 0.0625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.errorScreen {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -4.625rem;
+}
+
+.navbar {
+  background: rgba(70, 70, 70, 0.822);
   color: white;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 99;
 }
 
-.App-link {
-  color: #61dafb;
+.contactList {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 35%;
+  height: 100vh;
+  background: #e0e0e0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 768px) {
+  .contactList {
+    width: 100%;
   }
 }
+
+.contactList .listContainer {
+  background: rgba(255, 255, 255, 0.534);
+  width: 95%;
+  height: 82vh;
+  margin-top: 3.125rem;
+  margin-bottom: 0.625rem;
+  border-radius: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: scroll;
+  padding-bottom: 0.7rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .contactList .listContainer {
+    padding-top: 23.5rem;
+  }
+}
+
+.contactList button {
+  width: 95%;
+}
+
+.form-container {
+  width: 200%;
+  height: 100vh;
+  background: #e0e0e0;
+  border: black solid 0.0625rem;
+}
+
+.form-container .form-content {
+  margin: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-container .form-content .form-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.card {
+  margin-top: 0.625rem;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.625rem !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 95%;
+  }
+}
+
+.card img {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  margin-left: 0.625rem;
+  margin-right: 1.25rem;
+}
+
+.card .btn {
+  width: 10%;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  cursor: pointer;
+}
+
+.detail-container {
+  width: 65%;
+  height: 100vh;
+  background: #e0e0e0;
+  border: black solid 0.0625rem;
+}
+
+.detail-container .detail-content {
+  margin: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.detail-container .detail-content .detail-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.detail-container .detail-content .detail-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.detail-container .detail-content .detail-body img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.detail-container .detail-content .detail-body .personal-data {
+  width: 95%;
+  height: 10vh;
+  background: white;
+  border-radius: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.625rem;
+  padding: 2.25rem;
+}
+
+.detail-container .detail-content .detail-footer {
+  margin-left: 1.1rem;
+}
+/*# sourceMappingURL=App.css.map */
